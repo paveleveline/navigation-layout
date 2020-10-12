@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Front end development course">
+    <meta name="keywords" content="HTML,CSS,Learning">
+    <meta name="author" content="Eveline Pavel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation-layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+</head>
+
+<body>  
+    <div class="container">
+
+        <header>
+            <div class="header-text">Free shipping on orders over $250</div>
+        </header>
+
+        
+        <aside>
+            <section class="logo-section">
+                <div class="logo-image">
+                    <img src="assets/logo-vip.png" alt="Vip Logo">
+                </div>
+            </section>
+
+            <section class="nav-menu-section">
+                <nav>
+                    <ul>
+                        <li><a class="menu-item selected" data-content="your-orders-container">Your Orders</a></li>
+                        <li><a class="menu-item" data-content="reward-status-container">Reward Status</a></li>
+                        <li><a class="menu-item" data-content="account-settings-container">Account Setting</a></li>
+                        <li><a class="menu-item" data-content="payment-methods-container">Payment Methods</a></li>
+                        <li><a class="menu-item" data-content="sign-out-container">Sign Out</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </aside>
+
+
+        <main>
+            <section class="content your-orders-container">
+                <div>
+                    <h1>Your Orders</h1>
+                </div>
+            </section>
+
+            <section class="content reward-status-container hidden">
+                <div>
+                    <h1>Reward status</h1>
+                </div>
+            </section>
+
+            <section class="content account-settings-container hidden">
+                <div>
+                    <h1>Account Settings</h1>
+                </div>
+            </section>
+
+            <section class="content payment-methods-container hidden">
+                <div>
+                    <h1>Payment Methods</h1>
+                </div>
+            </section>
+
+            <section class="content sign-out-container hidden">
+                <div>
+                    <h1>Sign Out</h1>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="resources/main.js"></script>
+</body>
+
+</html>
