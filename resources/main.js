@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     const menuItems = document.getElementsByClassName("menu-item");
     console.log('menuItems', menuItems)
-
+    
     for (let i = 0; i < menuItems.length; i++) {
         const menuItem = menuItems[i];
         
@@ -27,9 +27,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
             }
             document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
-        
-            // const logo = document.getElementsByClassName('logo-image');
-            // To be continued
+            document.getElementsByClassName(dataContent)[1].classList.remove("hidden");
         });
     }
+
 });
