@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
             menuItem.classList.add("selected");
 
-
             const dataContent = menuItem.dataset.content;
             console.log('dataContent', dataContent)
             const contentElements = document.getElementsByClassName("content");
@@ -26,10 +25,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     contentElements[k].classList.add("hidden");
                 }
             }
-            // nu inteleg de ce lucrezi si pe 0 si pe 1, cu data-content ar trebui sa selectionezi in orice clipa acel section cu clasa respectiva data de link, nu?
             document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
             document.getElementsByClassName(dataContent)[1].classList.remove("hidden");
+            document.getElementsByClassName(dataContent)[2].classList.remove("hidden");
+
+
+            for(let m = 0; m < contentElements.length; m++) {
+                if(contentElements[m].classList.contains('hide')) {
+                    continue;
+                } else {
+                    contentElements[m].classList.add("hide");
+                }
+            }
+            document.getElementsByClassName(dataContent)[0].classList.remove("hide");
+            document.getElementsByClassName(dataContent)[1].classList.remove("hide");
+            document.getElementsByClassName(dataContent)[2].classList.remove("hide");
+
         });
+
     }
 
+
+
+
+
+
+    
 });
+
+
