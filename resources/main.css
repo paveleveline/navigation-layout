@@ -1,234 +1,353 @@
 html, body {
-    height: 100%;
-    width: 100%;
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+.container { 
+width: 100%;
+height: 100%;
+position: relative;
+font-size: 14px;
+font-family: 'Merriweather Sans', sans-serif;
+display: flex;
+flex-wrap: wrap;
+cursor: pointer;
+}
+
+header { 
+height: 5%; 
+width: 100%;
+background-color: #231f20; 
+color: #f2ede8;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 0.7em;
+}
+
+aside {
+width: 25%; 
+background-color: #f2ede8;
+}
+
+main{
+width: 75%;
+background-color: #f8f5f2;
+}
+
+aside, main { 
+    height: 95%;
+    flex-wrap: nowrap;
+}
+
+.left-corner-boundary {
+text-transform: uppercase;
+padding: 0.8em 0 0 2em;
+font-size: 1.3em;
+letter-spacing: 0.3em;
+font-weight: bolder;
+opacity: 0.8;
+}
+
+.logo-section {
+display: flex;
+height: 30%;
+align-items: flex-end; 
+justify-content: center;
+
+}
+
+.nav-menu-section {
+height: 60%;
+display: flex;
+justify-content: center;
+padding-top: 1em;
+}
+
+ul {
     margin: 0;
-    padding: 0;
-    }
-    
-    .container { 
-    width: 100%;
-    height: 100%;
-    position: relative;
-    font-size: 14px;
+    list-style-type: none;
+}
+
+ul li { 
+padding: 0.2em;
+opacity: 0.9;
+}
+
+ul a {
+    text-decoration: none;
     font-family: 'Merriweather Sans', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    cursor: pointer;
-    }
-    
-    header { 
-    height: 5%; 
-    width: 100%;
-    background-color: #231f20; 
-    color: #f2ede8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7em;
-    }
-    
-    aside {
-    width: 25%; 
-    background-color: #f2ede8;
-    }
-    
-    main{
-    width: 75%;
-    background-color: #f8f5f2;
-    }
-    
-    aside, main { 
-        height: 95%;
-        flex-wrap: nowrap;
-    }
-    
-    .left-corner-boundary {
-    text-transform: uppercase;
-    padding: 0.8em 0 0 2em;
-    font-size: 1.3em;
-    letter-spacing: 0.3em;
     font-weight: bolder;
-    opacity: 0.8;
-    }
-    
-    .logo-section {
+}
+
+.your-orders-container {
+    z-index: 5;
+}
+
+.reward-status-container {
+    z-index: 4;
+}
+
+.account-settings-container {
+    z-index: 3;
+}
+
+.payment-methods-container {
+    z-index: 2;
+}
+
+.sign-out-container {
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.hide {
+visibility: hidden;    
+}
+
+.menu-item.selected {
+    border-bottom: 4px solid #e8e0d8;
+}
+
+main section { 
+height: 95%;    
+}
+
+.top-content-wrapper { 
+height: 40%;  
+display: flex;
+font-size: 1.5em;
+padding-bottom: 0.4em;
+}
+
+.top-content-wrapper h1 { 
+    padding-left: 1.3em;
+    width: 100px;
+    align-self: flex-end;
+}
+
+.main-content-wrapper {
+    height: 50%;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
     display: flex;
-    height: 30%;
-    align-items: flex-end; 
-    justify-content: center;
-    
-    }
-    
-    .nav-menu-section {
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    padding-top: 1em;
-    }
-    
-    ul {
-        margin: 0;
-        list-style-type: none;
-    }
-    
-    ul li { 
-    padding: 0.2em;
-    opacity: 0.9;
-    }
-    
-    ul a {
-        text-decoration: none;
-        font-family: 'Merriweather Sans', sans-serif;
-        font-weight: bolder;
-    }
-    
-    .your-orders-container {
-        z-index: 5;
-    }
-    
-    .reward-status-container {
-        z-index: 4;
-    }
-    
-    .account-settings-container {
-        z-index: 3;
-    }
-    
-    .payment-methods-container {
-        z-index: 2;
-    }
-    
-    .sign-out-container {
-        z-index: 1;
-    }
-    
-    .hidden {
-        display: none;
-    }
-    
-    .hide {
-    visibility: hidden;    
-    }
-    
-    .menu-item.selected {
-        border-bottom: 4px solid #e8e0d8;
-    }
-    
-    main section { 
-    height: 95%;    
-    }
-    
-    .top-content-wrapper { 
-    height: 40%;  
-    /* border: 1px solid pink;  */
-    display: flex;
-    font-size: 1.5em;
-    padding-bottom: 0.4em;
-    }
-    
-    .top-content-wrapper h1 { 
-        padding-left: 1.3em;
-        width: 100px;
-        align-self: flex-end;
-    }
-    
-    .main-content-wrapper {
-        /* border: 1px solid green; */
-        height: 50%;
-        position: fixed;
-        width: 100%;
-        flex-direction: row;
-        display: flex;
-        font-family: 'Noto Sans JP', sans-serif;
-    }
-    
-    .left-side {
-        margin-left: 3em;
-        width: 20%;
-        background-color: #f2ede8;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        display: flex
-    }
-    
-    .backpack-image img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 70%;
-        height: 70%;
-        margin: 0 auto;
-    }
-    
-    .right-side {
-        width: 47%;
-        display: flex;
-        position: relative;
-        flex-wrap: wrap;
-    }
-    
-    .first-right-side{
-        height: auto;
-        width: 50%;
-    }
-    
-    
-    .first-right-side h1 { 
-    font-size: 0.7em;
-    margin-bottom: 0;
-    padding-left: 4.9em;
-    }
-    
-    .first-right-side div { 
-        font-size: 1.1em;
-        padding-left: 3em;
-        font-weight: 700;   
-        margin-bottom: 1.2em;
-    }
-    
-    
-    .second-right-side {
-        padding-top: 0.8em;
-        width: 43%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        font-size: 0.7em;
-        font-family: 'Noto Sans JP', sans-serif;
-    }
-    
-    .third-right-side {
-        width: 100%;
-        height: 40%;
-    }
-    
-    .third-right-side h1 { 
-        font-size: 0.7em;
-        padding-left: 4.8em;
-    }
-    
-    .products-wrapper { 
-        flex-direction: row;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    
-    .products-wrapper div {
-    width: 90px;
-    height: 80px;
-    background-color: #e8e0d8;
-    margin-left: 1.5em;
-    }
-    
-    .product-image img {
-        width: 80%;
-        height: 80%; 
-    }
-    
-    .product-image {
-    font-size: 0.7em;
-    justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.left-side {
+    margin-left: 3em;
+    width: 20%;
+    background-color: #f2ede8;
+    height: 100%;
     align-items: center;
+    justify-content: center;
+    display: flex
+}
+
+.backpack-image img {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+}
+
+.right-side {
+    width: 47%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.first-right-side{
+    height: auto;
+    width: 50%;
+}
+
+
+.first-right-side h1 { 
+font-size: 0.7em;
+margin-bottom: 0;
+padding-left: 4.9em;
+}
+
+.first-right-side div { 
+    font-size: 1.1em;
+    padding-left: 3em;
+    font-weight: 700;   
+    margin-bottom: 1.2em;
+}
+
+
+.second-right-side {
+    padding-top: 0.8em;
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.7em;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.third-right-side {
+    width: 100%;
+    height: 40%;
+}
+
+.third-right-side h1 { 
+    font-size: 0.7em;
+    padding-left: 4.8em;
+}
+
+.products-wrapper { 
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.products-wrapper div {
+width: 90px;
+height: 80px;
+background-color: #e8e0d8;
+margin-left: 1.5em;
+}
+
+.product-image img {
+    width: 80%;
+    height: 80%; 
+}
+
+.product-image {
+font-size: 0.7em;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+
+#reward-status-wrapper { 
+flex-direction: column;
+}
+
+.central-wrapper { 
+    width: 75%;
+    height: 80%;
+    display: flex;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+.left-column, .central-column, .right-column {
+width: 30%;  
+}
+
+.bottom-wrapper {
+display: flex;
+height: 20%;
+width: 75%;
+
+}
+
+h2 {
+font-size: 0.9em; 
+}
+
+.bottom-wrapper div {
+width: 30%;
+box-sizing: border-box;
+align-items: center;
+display: flex;
+}
+
+img[alt="Money img"] {
+transform: translateX(-140%);
     }
+
+#reward-status-wrapper .bottom-wrapper img {
+width: 20%;
+height: 100%; 
+}
+
+#reward-status-wrapper h3{
+font-size: 1.2em;
+margin: 0 0 0.2em 0;
+}
+
+.left-column h2{ 
+margin-top: 0;
+}
+
+.align div {
+font-size: 0.9em;
+margin-bottom: 2.3em;
+font-weight: 600;
+}
+
+#reward-status-wrapper { 
+padding-left: 2.7em;    
+}
+
+.right-top-navigation-menu {
+display: flex;
+justify-content: flex-end; 
+width: 80%;
+}
+
+.top-menu-item:first-of-type {
+font-size: 0.8em;
+font-weight: 600;
+}
+
+.top-menu-item { 
+    padding-right: 2.5em;
+}
+
+.top-menu-item img {
+    width: 17px;
+    height: 17px;
+    padding-top: 0.3em;
+}
+
+
+#payment-method-wrapper {
+flex-wrap: wrap;
+width: 40%;
+margin-left: 3em;
+}
+
+#payment-method-wrapper div{
+width: 40%;
+height: 50%;
+align-items: center;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin: 0 3em 0.5em 0;
+}
+
+img[alt="Bank card"]{
+width: auto;
+height: 95%;
+}
+
+img[alt="Add card"] {
+width: auto;
+height: 25%;
+align-items: center;
+display: flex;
+}
+
+.last-card-option { 
+flex-direction: column;
+background-color: #e8e0d8;
+}
+
+h4 { 
+    margin-top: 0.5em;
+}
