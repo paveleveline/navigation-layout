@@ -14,39 +14,30 @@
 
 <body>  
     <div class="container">
-
         <header>
             <div class="header-text">Free shipping on orders over $250</div>
         </header>
-
-        
         <aside>
             <section class="left-corner-boundary hide content selected your-orders-container reward-status-container account-settings-container payment-methods-container sign-out-container">
                 <div class="">Boundary</div>
             </section>
-
             <section class="logo-section">
-                <div class=" selected content logo-image your-orders-container">
+                <div class="selected content logo-image your-orders-container">
                     <img src="assets/logo-vip.png" alt="Vip Logo">
                 </div>
-
                 <div class="content logo-image hidden reward-status-container">
                     <img src="assets/logo-gold.png" alt="Gold Logo">
                 </div>
-
                 <div class="content logo-image hidden account-settings-container">
                     <img src="assets/logo-elite.png" alt="Elite Logo">
                 </div>
-
                 <div class="content logo-image hidden payment-methods-container">
                     <img src="assets/logo-member.png" alt="Member Logo">
                 </div>
-
                 <div class="content logo-image hidden sign-out-container">
                     <img src="assets/logo-vip.png" alt="Vip Logo">
                 </div>
             </section>
-
             <section class="nav-menu-section">
                 <nav>
                     <ul>
@@ -59,21 +50,32 @@
                 </nav>
             </section>
         </aside>
-
-
         <main>
+            <div class="right-top-navigation-menu">
+                <nav>
+                    <a class="top-menu-item">SHOP</a>  
+                    <a class="top-menu-item">
+                        <img src="assets/icon-find.png" alt="Loop image">
+                    </a>
+                    <a class="top-menu-item">
+                        <img src="assets/icon-cart-2.png" alt="Cart image">
+                    </a>
+                    <a class="top-menu-item">
+                        <img src="assets/icon-exit-3.png" alt="Exit image">
+                    </a>
+                    </ul> 
+                </nav>
+            </div>
             <section class="content your-orders-container">
                 <div class="top-content-wrapper">
                     <h1>Your Orders</h1>
                 </div>
-
                 <div class="main-content-wrapper">
                     <div class="left-side">
                         <div class="backpack-image">
                             <img src="assets/product-1/product.png" alt="Backpack image">
                         </div>
                     </div>
-
                     <div class="right-side">
                         <div class="first-right-side">
                             <h1>April 1, 2019</h1>
@@ -84,7 +86,7 @@
                             <div>$324.96</div>
                         </div>
                         <div class="second-right-side">
-                            <a class="order-details-btn" data-content="orders-details">Order Details</a>
+                            <a class="order-details-btn" data-content="order-details-container" id="orderDetailsLink">Order Details</a>
                             <div>Cancel / Modify</div>
                         </div>
                         <div class="third-right-side">
@@ -103,37 +105,13 @@
                             </div>
                         </div>
                     </div>
-                   
-                   
                 </div>
             </section>
-
             <section class="content reward-status-container hidden">
                 <div class="top-content-wrapper">
                     <h1>Reward Status</h1>
-
-                    <div class="right-top-navigation-menu">
-                        <nav>
-                            <a class="top-menu-item">SHOP</a>
-                                
-                            <a class="top-menu-item">
-                                <img src="assets/icon-find.png" alt="Loop image">
-                            </a>
-                            <a class="top-menu-item">
-                                <img src="assets/icon-cart-2.png" alt="Cart image">
-                            </a>
-                            <a class="top-menu-item">
-                                <img src="assets/icon-exit-3.png" alt="Exit image">
-                            </a>
-                            </ul> 
-                        </nav>
-                    </div>
                 </div>
-
-                
-
                 <div class="main-content-wrapper" id="reward-status-wrapper">
-
                     <div class="central-wrapper">
                         <div class="left-column">
                             <h2>Activity</h2>
@@ -155,7 +133,6 @@
                             <div>Referrals</div>
                         </div>
                     </div>
-
                     <div class="bottom-wrapper">
                         <div>
                             <h2>Benefits</h2>
@@ -167,54 +144,58 @@
                             <img src="assets/icon-savings.png" alt="Money img">
                         </div>
                     </div>
-                    
                 </div>
             </section>
-
             <section class="content account-settings-container hidden">
                 <div class="top-content-wrapper">
                     <h1>Account Settings</h1>
                 </div>
-
                 <div class="main-content-wrapper">
-                    <div>page2</div>
-                    <div></div>
-                    <div></div>
-                    <div</div>
-                    <div></div>
-                    <div></div>
+                    <form>
+                        <h1>Account</h1>
+                        <div class="forms-wrapper">
+                            <label for="nameInput">Name</label>
+                            <input required class="input-validation" value="Ben Cline" type="text" id="nameInput"/>
+                            <label for="numberInput">Number</label>
+                            <input required class="input-validation" type="tel" value="+1 801 641 09" id="numberInput">
+                            <label for="emailInput">Email</label>
+                            <input required class="input-validation" type="email" value="ben@rallyinteractive.com" id="emailInput"/>
+                            <label for="passInput">Password</label>
+                            <input required class="input-validation" type="password" id="passInput" placeholder="*************"/>
+                            <button type="button">Save changes</button>
+                        </div>
+                    <div class="adress-info-wrapper">
+                        <h1>Addresses</h1>
+                        <div class="adresses-wrapper">
+                            <address>
+                                Ben Cline<br>
+                                1234 S. Flestwood Mac Dr<br>
+                                Salt Lake City, UT B4109<br>
+                                United States<br>
+                                +1 801 641 09
+                            </address>
+                            <address>
+                                Ben Cline<br>
+                                C/O Rally Interactive<br>
+                                Salt Lake City, UT B4109<br>
+                                United States<br>
+                                +1 801 641 09
+                            </address>
+                        </div>
+                    </div>
+                </form>
                 </div>
-
             </section>
-
             <section class="content payment-methods-container hidden">
                 <div class="top-content-wrapper">
                     <h1>Payment Methods</h1>
-                    <div class="right-top-navigation-menu">
-                        <nav>
-                            <a class="top-menu-item">SHOP</a>
-                                
-                            <a class="top-menu-item">
-                                <img src="assets/icon-find.png" alt="Loop image">
-                            </a>
-                            <a class="top-menu-item">
-                                <img src="assets/icon-cart-2.png" alt="Cart image">
-                            </a>
-                            <a class="top-menu-item">
-                                <img src="assets/icon-exit-3.png" alt="Exit image">
-                            </a>
-                            </ul> 
-                        </nav>
-                    </div>
                 </div>
-
                 <div class="main-content-wrapper" id="payment-method-wrapper">
                     <div>
                         <img src="assets/card-1.png" alt="Bank card">
                     </div>
                     <div>
                         <img src="assets/card-3.png" alt="Bank card">
-
                     </div>
                     <div>
                         <img src="assets/card-2.png" alt="Bank card">
@@ -224,28 +205,55 @@
                         <h4>ADD CARD</h4>
                     </div>
                 </div>
-
             </section>
-
-            <section class="content sign-out-container hidden">
-                <div class="top-content-wrapper">
-                    <h1>Sign Out</h1>
+            <section class="content order-details-container hidden" id="orderDetails">
+                <div class="top-content-wrapper titles">
+                    <h3>Your Orders/Order #30002</h3>
+                    <div class="titles-wrapper">
+                            <h1>Order Details</h1>
+                            <h5>Order <br> Cancelled</h5>
+                    </div>
                 </div>
-                <div class="main-content-wrapper">
-                    <div>page4</div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+                <div class="main-content-wrapper orders">
+                    <div class="columns-wrapper">
 
+                        <div>
+                           <h6>Billing</h6>
+                        </div> 
+                        <div class="middle-column">
+                            <address>Rally Interactive <br>
+                                244 W 300 N <br>
+                                Salt Lake City, Utah 84103 <br>
+                                United States <br>
+                                (801)643-3595
+                            </address> 
+                        </div> 
+                        <div class="status">
+                            <div>Payment Status:</div>
+                            <div>Refunded</div>
+                        </div> 
+                    </div>
+                    <div class="columns-wrapper">
+                        <div>
+                            <h6>Shipping</h6>
+                        </div> 
+                        <div class="middle-column">
+                            <address>Rally Interactive <br>
+                                244 W 300 N <br>
+                                Salt Lake City, Utah 84103 <br>
+                                United States <br>
+                                (801)643-3595
+                            </address> 
+                        </div> 
+                        <div class="status">
+                            <div>Payment Status:</div>
+                            <div>Unfulfilled</div>
+                        </div> 
+                    </div>
+                </div>
             </section>
-
         </main>
     </div>
-
     <script src="resources/main.js"></script>
 </body>
-
 </html>
