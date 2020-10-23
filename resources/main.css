@@ -1,3 +1,4 @@
+/* e ok sa ai totul intr-un fisier CSS. Te refereai la posibilitatea de a avea mai multe fisiere CSS impartite pe pagini? Ai foarte mult cod comun in proiectul asta, cred ca mai mult te-ar incurca sa il imparti  */
 html, body {
     width: 100%;
     margin: 0;
@@ -82,12 +83,9 @@ html, body {
         font-weight: bolder;
     }
     
-    .hidden, label {
-        display: none;
-    }
-    
     .hide {
-    visibility: hidden;    
+        /* iti recomand sa folosesti display: hidden, visibility continua sa iti ocupe spatiul. Ai folosit intentionat asta? */
+        visibility: hidden;    
     }
     
     .menu-item.selected {
@@ -461,4 +459,9 @@ line-height: 1.9em;
 
 .columns-wrapper:nth-of-type(2) {
 margin-top: 4em;    
+}
+
+/* clase precum hidden care sunt de utility, iti sugerez sa le pui la finalul fisierului ca sa castigi in prioritate, altfel nu ti-ar fi ascuns meniul niciodata pentru ca ii acorzi un display: flex mai jos si are prioritate. Daca nu intelegi partea asta, spune-mi, sa mai discutam. */
+.hidden, label {
+    display: none;
 }
