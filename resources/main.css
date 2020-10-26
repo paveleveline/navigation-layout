@@ -1,4 +1,3 @@
-/* e ok sa ai totul intr-un fisier CSS. Te refereai la posibilitatea de a avea mai multe fisiere CSS impartite pe pagini? Ai foarte mult cod comun in proiectul asta, cred ca mai mult te-ar incurca sa il imparti  */
 html, body {
     width: 100%;
     margin: 0;
@@ -84,7 +83,6 @@ html, body {
     }
     
     .hide {
-        /* iti recomand sa folosesti display: hidden, visibility continua sa iti ocupe spatiul. Ai folosit intentionat asta? */
         visibility: hidden;    
     }
     
