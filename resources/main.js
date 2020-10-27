@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    const menuItems = document.getElementsByClassName("menu-item");
-    console.log('menuItems', menuItems)
-    
+ $(function() {
+    const menuItems = $('.menu-item');
+    const rightTopNavigationMenu = $('.right-top-navigation-menu');
+    const leftCornerBoundary = $('.left-corner-boundary');
+
     for (let i = 0; i < menuItems.length; i++) {
         const menuItem = menuItems[i];
         
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             const dataContent = menuItem.dataset.content;
             console.log('dataContent', dataContent);
-            const contentElements = document.getElementsByClassName("content");
+            const contentElements = $('.content');
             for(let k = 0; k < contentElements.length; k++) {
                 if(contentElements[k].classList.contains('hidden')) {
                     continue;
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     contentElements[k].classList.add("hidden");
                 }
             }
-
+            // Aici n-am reusit sa schimb cu selector jquery - dataContent
             document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
             document.getElementsByClassName(dataContent)[1].classList.remove("hidden");
             document.getElementsByClassName(dataContent)[2].classList.remove("hidden");
@@ -38,31 +39,31 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
             }
             document.getElementsByClassName(dataContent)[0].classList.remove("hide");
-        
+
             if(dataContent === 'your-orders-container') {
                 console.log(1)
-                document.getElementsByClassName('right-top-navigation-menu')[0].classList.add('hide');
+                rightTopNavigationMenu.addClass('hide');
             } else {
                 console.log(2)
-                document.getElementsByClassName('right-top-navigation-menu')[0].classList.remove('hide');
+                rightTopNavigationMenu.removeClass('hide');
             }
 
             if(dataContent === 'your-orders-container') {
                 console.log(1)
-                document.getElementsByClassName('left-corner-boundary')[0].classList.add('hide');
+                leftCornerBoundary.addClass('hide');
             } else {
                 console.log(2)
-                document.getElementsByClassName('left-corner-boundary')[0].classList.remove('hide');
+                leftCornerBoundary.removeClass('hide');
             }
         });
 
     }
-
+    // N-am reusit sa schimb cu selector jquery, fiindca daca puneam, la click pe event nu-mi mai deschidea pagina Order Details 
     const orderDetailsBtn = document.getElementById('orderDetailsLink');
     console.log(orderDetailsBtn);
     const dataLink = orderDetailsBtn.dataset.content;
     const linkedElements = document.getElementsByClassName('content');
-    
+     
     orderDetailsBtn.addEventListener('click', function() {
     for(let p = 0; p < linkedElements.length; p++) {
         if(linkedElements[p].classList.contains('hidden')) {
@@ -72,10 +73,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
     document.getElementsByClassName(dataLink)[0].classList.remove("hidden");
-   document.getElementsByClassName('logo-section')[0].getElementsByClassName('account-settings-container')[0].classList.remove("hidden"); 
-   document.getElementsByClassName('left-corner-boundary')[0].classList.remove('hidden');
-   document.getElementsByClassName('left-corner-boundary')[0].classList.remove('hide');
-   document.getElementsByClassName('right-top-navigation-menu')[0].classList.remove('hide');
+   document.getElementsByClassName('logo-section')[0].getElementsByClassName('your-orders-container')[0].classList.remove("hidden"); 
+   leftCornerBoundary.removeClass('hidden');
+   leftCornerBoundary.removeClass('hide');
+   rightTopNavigationMenu.removeClass('hide');
 });
     
 });
