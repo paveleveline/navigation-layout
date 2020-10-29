@@ -59,6 +59,7 @@
 
     }
     // N-am reusit sa schimb cu selector jquery, fiindca daca puneam, la click pe event nu-mi mai deschidea pagina Order Details 
+    //nu iti mai deschidea pentru ca nu mai vede dataset pe un obiect jQuery, hai sa le inlocuim pe toate cu ce amvazut data trecuta si sa vedem de acolo
     const orderDetailsBtn = document.getElementById('orderDetailsLink');
     console.log(orderDetailsBtn);
     const dataLink = orderDetailsBtn.dataset.content;
