@@ -2,19 +2,18 @@
     const menuItems = $('.menu-item');
     const rightTopNavigationMenu = $('.right-top-navigation-menu');
     const leftCornerBoundary = $('.left-corner-boundary');
-
+  
     for (let i = 0; i < menuItems.length; i++) {
         const menuItem = menuItems[i];
         
         menuItem.addEventListener('click', function() {
-            for(let j = 0; j < menuItems.length; j++) {
-                if(menuItems[j].classList.contains('selected')){
-                    menuItems[j].classList.remove("selected");
-                } else {
-                    continue;
-                }
-            }
-            menuItem.classList.add("selected");
+           
+            const navLinks = $('ul').find('a');
+            navLinks.click(function(e) {
+                e.preventDefault();
+                navLinks.removeClass('selected');
+                $(this).addClass('selected');
+            }); 
 
             const dataContent = menuItem.dataset.content;
             console.log('dataContent', dataContent);
@@ -30,15 +29,6 @@
             document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
             document.getElementsByClassName(dataContent)[1].classList.remove("hidden");
             document.getElementsByClassName(dataContent)[2].classList.remove("hidden");
-
-            for(let m = 0; m < contentElements.length; m++) {
-                if(contentElements[m].classList.contains('hide')) {
-                    contentElements[m].classList.add("hide");
-                } else {
-                    contentElements[m].classList.remove("hide");
-                }
-            }
-            document.getElementsByClassName(dataContent)[0].classList.remove("hide");
 
             if(dataContent === 'your-orders-container') {
                 console.log(1)
@@ -56,7 +46,6 @@
                 leftCornerBoundary.removeClass('hide');
             }
         });
-
     }
     // N-am reusit sa schimb cu selector jquery, fiindca daca puneam, la click pe event nu-mi mai deschidea pagina Order Details 
     //nu iti mai deschidea pentru ca nu mai vede dataset pe un obiect jQuery, hai sa le inlocuim pe toate cu ce amvazut data trecuta si sa vedem de acolo
@@ -79,5 +68,5 @@
    leftCornerBoundary.removeClass('hide');
    rightTopNavigationMenu.removeClass('hide');
 });
-    
+
 });
