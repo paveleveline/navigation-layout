@@ -1,13 +1,10 @@
- $(function() {
+$(function() {
     const menuItems = $('.menu-item');
     const rightTopNavigationMenu = $('.right-top-navigation-menu');
     const leftCornerBoundary = $('.left-corner-boundary');
   
-    for (let i = 0; i < menuItems.length; i++) {
-        const menuItem = menuItems[i];
-        
+    Array.from(menuItems).forEach(function(menuItem){
         menuItem.addEventListener('click', function() {
-           
             const navLinks = $('ul').find('a');
             navLinks.click(function(e) {
                 e.preventDefault();
@@ -15,6 +12,7 @@
                 $(this).addClass('selected');
             }); 
 
+        //    Nu merge data content
             const dataContent = menuItem.dataset.content;
             console.log('dataContent', dataContent);
             const contentElements = $('.content');
@@ -25,30 +23,30 @@
                     contentElements[k].classList.add("hidden");
                 }
             }
-            // Aici n-am reusit sa schimb cu selector jquery - dataContent
             document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
             document.getElementsByClassName(dataContent)[1].classList.remove("hidden");
             document.getElementsByClassName(dataContent)[2].classList.remove("hidden");
 
             if(dataContent === 'your-orders-container') {
                 console.log(1)
-                rightTopNavigationMenu.addClass('hide');
-            } else {
-                console.log(2)
-                rightTopNavigationMenu.removeClass('hide');
-            }
-
-            if(dataContent === 'your-orders-container') {
-                console.log(1)
+                rightTopNavigationMenu.addClass('hide'), 
                 leftCornerBoundary.addClass('hide');
             } else {
                 console.log(2)
+                rightTopNavigationMenu.removeClass('hide');
                 leftCornerBoundary.removeClass('hide');
             }
+            //not working fadeIn/fadeOut
+            // if(dataContent === 'your-orders-container') {
+            //     rightTopNavigationMenu.fadeOut('slow'), 
+            //     leftCornerBoundary.fadeOut('slow');
+            // } else {
+            //     rightTopNavigationMenu.fadeIn('slow'), 
+            //     leftCornerBoundary.fadeIn('slow');
+            // }
         });
-    }
-    // N-am reusit sa schimb cu selector jquery, fiindca daca puneam, la click pe event nu-mi mai deschidea pagina Order Details 
-    //nu iti mai deschidea pentru ca nu mai vede dataset pe un obiect jQuery, hai sa le inlocuim pe toate cu ce amvazut data trecuta si sa vedem de acolo
+
+    });
     const orderDetailsBtn = document.getElementById('orderDetailsLink');
     console.log(orderDetailsBtn);
     const dataLink = orderDetailsBtn.dataset.content;
@@ -70,3 +68,5 @@
 });
 
 });
+
+
